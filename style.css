@@ -112,7 +112,7 @@
   row-gap: 60px;
 }
 .trending-section .cards .card {
-  max-width: 350px;
+  width: 350px;
   height: 220px;
   position: relative;
 }
@@ -124,7 +124,12 @@
 .trending-section .cards .card .card-details {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding-top: 10px;
+  font-size: 14px;
+}
+.trending-section .cards .card .card-details p {
+  font-size: 20px;
 }
 .trending-section .cards .card .card-discount {
   position: absolute;

@@ -113,7 +113,7 @@
     justify-content: space-between;
     row-gap: 60px;
     .card {
-      max-width: 350px;
+      width: 350px;
       height: 220px;
       position: relative;
       .card-img {
@@ -124,7 +124,12 @@
       .card-details {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         padding-top: 10px;
+        font-size: 14px;
+        p {
+          font-size: 20px;
+        }
       }
       .card-discount {
         position: absolute;
