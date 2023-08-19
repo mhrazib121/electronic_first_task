@@ -51,6 +51,7 @@
   justify-content: space-between;
   align-items: center;
   gap: 10px;
+  cursor: pointer;
 }
 .top-section #nav-item-container #nav-item2 #submenu-container {
   display: none;
@@ -234,6 +235,53 @@
   font-size: 14px;
 }
 
+@media (min-width: 769px) and (max-width: 1024px) {
+  .top-section {
+    height: 60vh;
+  }
+  .top-section .top-details {
+    margin-top: 50px;
+    width: 90%;
+  }
+  .nav-container {
+    flex-direction: row;
+    align-items: center;
+    padding-top: 10px;
+  }
+  .nav-container #humberger {
+    display: block;
+  }
+  .nav-container #menu-cross {
+    display: none;
+  }
+  .nav-item-container {
+    flex-direction: row;
+    gap: 20px;
+  }
+  .nav-item-container .nav-item {
+    display: flex;
+    gap: 15px;
+  }
+  .nav-item-container #nav-item2 {
+    padding: 10px;
+  }
+  .nav-item-container #submenu-container {
+    display: none;
+  }
+  .nav-item-container .search-container #search-box {
+    padding: 10px;
+  }
+  .nav-item-container #search-icon {
+    top: 20px;
+  }
+  .trending-section .header {
+    width: 90%;
+  }
+  .trending-section .cards {
+    width: 90%;
+    justify-content: center;
+  }
+}
 @media (max-width: 768px) {
   .top-section {
     height: 70vh;
@@ -297,53 +345,6 @@
     width: 90%;
   }
   .trending-section .cards {
-    justify-content: center;
-  }
-}
-@media (min-width: 769px) and (max-width: 1024px) {
-  .top-section {
-    height: 60vh;
-  }
-  .top-section .top-details {
-    margin-top: 50px;
-    width: 90%;
-  }
-  .nav-container {
-    flex-direction: row;
-    align-items: center;
-    padding-top: 10px;
-  }
-  .nav-container #humberger {
-    display: block;
-  }
-  .nav-container #menu-cross {
-    display: none;
-  }
-  .nav-item-container {
-    flex-direction: row;
-    gap: 20px;
-  }
-  .nav-item-container .nav-item {
-    display: flex;
-    gap: 15px;
-  }
-  .nav-item-container #nav-item2 {
-    padding: 10px;
-  }
-  .nav-item-container #submenu-container {
-    display: none;
-  }
-  .nav-item-container .search-container #search-box {
-    padding: 10px;
-  }
-  .nav-item-container #search-icon {
-    top: 20px;
-  }
-  .trending-section .header {
-    width: 90%;
-  }
-  .trending-section .cards {
-    width: 90%;
     justify-content: center;
   }
 }/*# sourceMappingURL=style.css.map */

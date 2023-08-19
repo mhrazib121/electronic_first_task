@@ -47,6 +47,7 @@
         justify-content: space-between;
         align-items: center;
         gap: 10px;
+        cursor: pointer;
       }
       #submenu-container {
         display: none;
@@ -234,6 +235,59 @@
     }
   }
 }
+
+// Media Query for Tablet Devices
+@media (min-width: 769px) and (max-width: 1024px) {
+  .top-section {
+    height: 60vh;
+    .top-details {
+      margin-top: 50px;
+      width: 90%;
+    }
+  }
+  .nav-container {
+    flex-direction: row;
+    align-items: center;
+    padding-top: 10px;
+    #humberger {
+      display: block;
+    }
+    #menu-cross {
+      display: none;
+    }
+  }
+  .nav-item-container {
+    flex-direction: row;
+    gap: 20px;
+    .nav-item {
+      display: flex;
+      gap: 15px;
+    }
+    #nav-item2 {
+      padding: 10px;
+    }
+    #submenu-container {
+      display: none;
+    }
+    .search-container {
+      #search-box {
+        padding: 10px;
+      }
+    }
+    #search-icon {
+      top: 20px;
+    }
+  }
+  .trending-section {
+    .header {
+      width: 90%;
+    }
+    .cards {
+      width: 90%;
+      justify-content: center;
+    }
+  }
+}
 // Media Query for Mobile Devices
 @media (max-width: 768px) {
   .top-section {
@@ -302,60 +356,6 @@
       width: 90%;
     }
     .cards {
-      justify-content: center;
-    }
-  }
-}
-
-// Your existing styles...
-
-@media (min-width: 769px) and (max-width: 1024px) {
-  .top-section {
-    height: 60vh;
-    .top-details {
-      margin-top: 50px;
-      width: 90%;
-    }
-  }
-  .nav-container {
-    flex-direction: row; // Revert to horizontal layout
-    align-items: center;
-    padding-top: 10px;
-    #humberger {
-      display: block; // Show the hamburger icon
-    }
-    #menu-cross {
-      display: none; // Hide the cross icon
-    }
-  }
-  .nav-item-container {
-    flex-direction: row; // Revert to horizontal layout
-    gap: 20px;
-    .nav-item {
-      display: flex;
-      gap: 15px;
-    }
-    #nav-item2 {
-      padding: 10px; // Adjust padding for tablet
-    }
-    #submenu-container {
-      display: none; // Hide the submenu
-    }
-    .search-container {
-      #search-box {
-        padding: 10px; // Adjust padding for tablet
-      }
-    }
-    #search-icon {
-      top: 20px; // Adjust the position for tablet
-    }
-  }
-  .trending-section {
-    .header {
-      width: 90%;
-    }
-    .cards {
-      width: 90%;
       justify-content: center;
     }
   }
