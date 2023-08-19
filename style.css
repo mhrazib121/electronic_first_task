@@ -37,7 +37,7 @@
   display: flex;
   gap: 15px;
 }
-.top-section .nav-item-container .nav-item2 {
+.top-section .nav-item-container #nav-item2 {
   display: flex;
   justify-content: space-between;
   gap: 40px;
@@ -45,14 +45,18 @@
   border-radius: 50px;
   background: linear-gradient(to right, var(--primary-bg-color), #445059);
 }
-.top-section .nav-item-container .nav-item2 .nav-item2-value {
+.top-section .nav-item-container #nav-item2 .nav-item2-value {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 10px;
 }
-.top-section .nav-item-container .search-box {
+.top-section .nav-item-container .search-container {
   display: flex;
+  gap: 5px;
+}
+.top-section .nav-item-container .search-container #search-box {
+  display: none;
   justify-content: space-between;
   gap: 40px;
   padding: 20px;
@@ -60,7 +64,7 @@
   width: 600px;
   background: linear-gradient(to right, var(--primary-light), var(--primary-dark));
 }
-.top-section .nav-item-container .search-box input {
+.top-section .nav-item-container .search-container #search-box input {
   width: 100%;
   background-color: transparent;
   border: none;
@@ -68,16 +72,24 @@
   color: white;
   opacity: 70%;
 }
-.top-section .nav-item-container .search-box input:focus {
+.top-section .nav-item-container .search-container #search-box input:focus {
   outline: none;
   border-color: transparent;
+}
+.top-section .nav-item-container .search-container #search-box input::-moz-placeholder {
+  color: white;
+  opacity: 70%;
+}
+.top-section .nav-item-container .search-container #search-box input::placeholder {
+  color: white;
+  opacity: 70%;
 }
 .top-section .nav-item-container #search-icon {
   padding: 20px;
   background-color: var(--primary-light);
   border-radius: 50%;
   position: absolute;
-  top: 40%;
+  top: 28%;
   right: -10px;
 }
 .top-section .nav-icon {

@@ -34,7 +34,7 @@
       display: flex;
       gap: 15px;
     }
-    .nav-item2 {
+    #nav-item2 {
       display: flex;
       justify-content: space-between;
       gap: 40px;
@@ -48,37 +48,46 @@
         gap: 10px;
       }
     }
-    .search-box {
+    .search-container {
       display: flex;
-      justify-content: space-between;
-      gap: 40px;
-      padding: 20px;
-      border-radius: 50px;
-      width: 600px;
-      background: linear-gradient(
-        to right,
-        var(--primary-light),
-        var(--primary-dark)
-      );
-      input {
-        width: 100%;
-        background-color: transparent;
-        border: none;
-        font-size: 16px;
-        color: white;
-        opacity: 70%;
-        &:focus {
-          outline: none;
-          border-color: transparent;
+      gap: 5px;
+      #search-box {
+        display: none;
+        justify-content: space-between;
+        gap: 40px;
+        padding: 20px;
+        border-radius: 50px;
+        width: 600px;
+        background: linear-gradient(
+          to right,
+          var(--primary-light),
+          var(--primary-dark)
+        );
+        input {
+          width: 100%;
+          background-color: transparent;
+          border: none;
+          font-size: 16px;
+          color: white;
+          opacity: 70%;
+          &:focus {
+            outline: none;
+            border-color: transparent;
+          }
+          &::placeholder {
+            color: white;
+            opacity: 70%;
+          }
         }
       }
     }
+
     #search-icon {
       padding: 20px;
       background-color: var(--primary-light);
       border-radius: 50%;
       position: absolute;
-      top: 40%;
+      top: 28%;
       right: -10px;
     }
   }
