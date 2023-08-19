@@ -2,6 +2,7 @@
   --primary-dark: #fe491b;
   --primary-light: #fe7405;
   --primary-bg-color: #272727;
+  --primary-bg-light-color: #445059;
 }
 * {
   margin: 0;
@@ -24,7 +25,7 @@
     margin: auto;
     padding-top: 20px;
   }
-  .nav-item-container {
+  #nav-item-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -55,6 +56,7 @@
         position: absolute;
         top: 95%;
         left: 5px;
+        z-index: 10;
         background: rgba(128, 128, 128, 0.742);
         backdrop-filter: blur(8px);
         border-radius: 10px;
@@ -134,6 +136,13 @@
     display: flex;
     gap: 10px;
     align-items: center;
+    z-index: 10;
+    #humberger {
+      display: none;
+    }
+    #menu-cross {
+      display: none;
+    }
   }
   .top-details {
     width: 70%;
@@ -168,7 +177,7 @@
 
 // Trending Section
 .trending-section {
-  height: 100vh;
+  height: 120vh;
   background-color: var(--primary-bg-color);
   .header {
     width: 70%;
@@ -181,6 +190,10 @@
       padding: 8px 10px;
       border: 0.2px solid rgba(255, 255, 255, 0.411);
       border-radius: 5px;
+      cursor: pointer;
+      &:hover {
+        background-color: var(--primary-light);
+      }
     }
   }
   .cards {
@@ -224,50 +237,126 @@
 // Media Query for Mobile Devices
 @media (max-width: 768px) {
   .top-section {
-    height: auto;
+    height: 70vh;
+    .top-details {
+      margin-top: 50px;
+      width: 90%;
+    }
   }
   .nav-container {
-    // flex-direction: column;
+    justify-content: start;
+    #nav-item-container {
+      display: none;
+      padding-top: 10px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: linear-gradient(
+        var(--primary-bg-color),
+        var(--primary-bg-light-color)
+      );
+      .nav-item {
+        flex-direction: column;
+        gap: 10px;
+      }
+      #nav-item2 {
+        flex-direction: column;
+        gap: 0px;
+        padding: 10px;
+        background: transparent;
+        #submenu-container {
+          width: 350px;
+          height: auto;
+          margin-left: 40px;
+        }
+      }
+      #search-icon {
+        right: 10px;
+        top: 20px;
+        display: none;
+      }
+      #submenu-container {
+        width: 100%;
+        left: 0;
+      }
+      .search-container {
+        flex-direction: column;
+        gap: 5px;
+        #search-box {
+          padding: 10px;
+        }
+      }
+    }
+    .nav-icon {
+      position: absolute;
+      right: 5px;
+      top: 15px;
+      #humberger {
+        display: block;
+      }
+    }
+  }
+  .trending-section {
+    .header {
+      width: 90%;
+    }
+    .cards {
+      justify-content: center;
+    }
+  }
+}
+
+// Your existing styles...
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .top-section {
+    height: 60vh;
+    .top-details {
+      margin-top: 50px;
+      width: 90%;
+    }
+  }
+  .nav-container {
+    flex-direction: row; // Revert to horizontal layout
     align-items: center;
+    padding-top: 10px;
+    #humberger {
+      display: block; // Show the hamburger icon
+    }
+    #menu-cross {
+      display: none; // Hide the cross icon
+    }
   }
   .nav-item-container {
-    display: none;
-    padding-top: 10px;
+    flex-direction: row; // Revert to horizontal layout
+    gap: 20px;
     .nav-item {
-      flex-direction: column;
-      gap: 10px;
+      display: flex;
+      gap: 15px;
     }
     #nav-item2 {
-      flex-direction: column;
-      gap: 0px;
-      padding: 10px;
-      display: none;
+      padding: 10px; // Adjust padding for tablet
     }
-    #search-box {
-      width: 100%;
-      padding: 10px;
-
-      input {
-        font-size: 14px;
+    #submenu-container {
+      display: none; // Hide the submenu
+    }
+    .search-container {
+      #search-box {
+        padding: 10px; // Adjust padding for tablet
       }
     }
     #search-icon {
-      right: 10px;
-      top: 20px;
+      top: 20px; // Adjust the position for tablet
     }
-    #submenu-container {
-      width: 100%;
-      left: 0;
+  }
+  .trending-section {
+    .header {
+      width: 90%;
     }
-    .search-container {
-      flex-direction: column;
-      gap: 5px;
-      #search-box {
-        padding: 10px;
-      }
-      #cross {
-        display: block;
-      }
+    .cards {
+      width: 90%;
+      justify-content: center;
     }
   }
 }
