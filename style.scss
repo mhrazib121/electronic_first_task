@@ -48,6 +48,9 @@
         align-items: center;
         gap: 10px;
         cursor: pointer;
+        #pc-up-arrow {
+          display: none;
+        }
       }
       #submenu-container {
         display: none;
@@ -266,17 +269,6 @@
     #nav-item2 {
       padding: 10px;
     }
-    #submenu-container {
-      display: none;
-    }
-    .search-container {
-      #search-box {
-        padding: 10px;
-      }
-    }
-    #search-icon {
-      top: 20px;
-    }
   }
   .trending-section {
     .header {
@@ -322,17 +314,13 @@
         #submenu-container {
           width: 350px;
           height: auto;
-          margin-left: 40px;
+          margin: 10px;
         }
       }
       #search-icon {
         right: 10px;
         top: 20px;
         display: none;
-      }
-      #submenu-container {
-        width: 100%;
-        left: 0;
       }
       .search-container {
         flex-direction: column;

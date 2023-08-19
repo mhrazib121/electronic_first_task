@@ -2,10 +2,12 @@ const searchIconElement = document.getElementById("search-icon");
 const searchBoxElement = document.getElementById("search-box");
 const navItem2Element = document.getElementById("nav-item2");
 const crossElement = document.getElementById("cross");
+// Button  for showing sub menu
 const playstationDownArrowElement = document.getElementById("playstation");
 const nintendoDownArrowElement = document.getElementById("nintendo");
 const xboxDownArrowElement = document.getElementById("xbox");
 const pcDownArrowElement = document.getElementById("PC-down-arrow");
+// const pcUp = document.getElementById("pc-up-arrow");
 const submenuContainerElement = document.getElementById("submenu-container");
 const humbergerElement = document.getElementById("humberger");
 const menuItemElement = document.getElementById("nav-item-container");
@@ -18,7 +20,7 @@ playstationDownArrowElement.addEventListener("click", showSubmenu);
 xboxDownArrowElement.addEventListener("click", showSubmenu);
 nintendoDownArrowElement.addEventListener("click", showSubmenu);
 humbergerElement.addEventListener("click", showMenu);
-menuItemElement.addEventListener("click", showMenu);
+// menuItemElement.addEventListener("click", showMenu);
 menuCrossElement.addEventListener("click", closeMenu);
 
 function showSearchBox() {

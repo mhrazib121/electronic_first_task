@@ -53,6 +53,9 @@
   gap: 10px;
   cursor: pointer;
 }
+.top-section #nav-item-container #nav-item2 .nav-item2-value #pc-up-arrow {
+  display: none;
+}
 .top-section #nav-item-container #nav-item2 #submenu-container {
   display: none;
   padding: 20px;
@@ -265,15 +268,6 @@
   .nav-item-container #nav-item2 {
     padding: 10px;
   }
-  .nav-item-container #submenu-container {
-    display: none;
-  }
-  .nav-item-container .search-container #search-box {
-    padding: 10px;
-  }
-  .nav-item-container #search-icon {
-    top: 20px;
-  }
   .trending-section .header {
     width: 90%;
   }
@@ -315,16 +309,12 @@
   .nav-container #nav-item-container #nav-item2 #submenu-container {
     width: 350px;
     height: auto;
-    margin-left: 40px;
+    margin: 10px;
   }
   .nav-container #nav-item-container #search-icon {
     right: 10px;
     top: 20px;
     display: none;
-  }
-  .nav-container #nav-item-container #submenu-container {
-    width: 100%;
-    left: 0;
   }
   .nav-container #nav-item-container .search-container {
     flex-direction: column;
